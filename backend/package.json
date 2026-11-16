@@ -1,5 +1,14 @@
 {
   "name": "huskykit-backend",
   "version": "0.1.0",
-  "private": true
+  "private": true,
+  "scripts": {
+    "start": "node src/server.js",
+    "check": "node --check src/server.js && node --check src/db/client.js && node --check src/routes/campus.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "express": "^5.3.0",
+    "mongodb": "^7.9.0"
+  }
 }
