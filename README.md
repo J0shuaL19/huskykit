@@ -9,7 +9,7 @@ HuskyKit is a planned community website where Northeastern students can share ac
 
 ## Project status
 
-The Campus Life public read API and a 1,000-post synthetic seed script are implemented. The frontend, write operations, authentication, live database setup, deployment, and screenshots have not been added yet.
+The Campus Life public read API and a 1,000-post synthetic seed script are implemented. The seed script and read API have been verified against an Atlas database. The frontend, write operations, authentication, deployment, and screenshots have not been added yet.
 
 ## Planned stack
 
@@ -28,7 +28,7 @@ The Campus Life public read API and a 1,000-post synthetic seed script are imple
 
 The backend requires Node.js, npm, and a MongoDB connection. In the backend directory, run npm install, set MONGODB_URI (and optionally MONGODB_DB and PORT) using backend/.env.example as a reference, then run npm start. The API provides GET /api/health, GET /api/campus-posts, and GET /api/campus-posts/:id. The list endpoint accepts keyword, topic, neighborhood, budgetLevel, and page. It returns 20 posts per page.
 
-For Atlas, create a cluster and a database user, allow your current IP address, and copy the Node.js driver connection string. Save it as MONGODB_URI in a local backend/.env file and set MONGODB_DB=huskykit. Do not commit that file or share the password. With Node.js 26, run node --env-file=.env scripts/seedCampus.js from backend to add 1,000 labeled synthetic Campus Life posts, then run node --env-file=.env src/server.js to serve them. Running the seed command again only fills missing demo posts.
+For Atlas, create a cluster and a database user, allow your current IP address, and copy the Node.js driver connection string. Save it as MONGODB_URI in a local .env file and optionally set MONGODB_DB=huskykit. Do not commit that file or share the password. If .env is in the project root, run node --env-file=../.env scripts/seedCampus.js from backend to add 1,000 labeled synthetic Campus Life posts, then run node --env-file=../.env src/server.js to serve them. Running the seed command again only fills missing demo posts. The backend reads MONGODB_URI directly; separate MONGODB_USERNAME and MONGODB_PASSWORD variables are not currently used.
 
 The course link, screenshots, and frontend build instructions will be added as those parts become available.
 
