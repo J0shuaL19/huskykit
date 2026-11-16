@@ -22,7 +22,7 @@ The Campus Life public read API and a 1,000-post synthetic seed script are imple
 
 - `frontend/`: React client and component styles
 - `backend/`: Express API, database access, authentication, and seed scripts
-- `docs/`: design document and mockups
+- `docs/`: Campus Life design draft and mockups; the full team design document is still pending
 
 ## Course and build information
 
@@ -34,7 +34,7 @@ The course link, screenshots, and frontend build instructions will be added as t
 
 ## AI disclosure
 
-AI assistance was used for the initial repository structure and documentation, Campus Life read API, synthetic seed script, and related tests. Further AI assistance will be disclosed here as the project develops.
+AI assistance was used for the initial repository structure and documentation, Campus Life read API, synthetic seed script, design draft, mockups, and related tests. Further AI assistance will be disclosed here as the project develops.
 
 ## License
 

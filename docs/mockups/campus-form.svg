@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="900" viewBox="0 0 1080 900">
+  <rect width="1080" height="900" fill="#f6f7f9"/>
+  <rect width="1080" height="70" fill="#182b49"/>
+  <text x="60" y="45" fill="white" font-family="Arial" font-size="26" font-weight="bold">HuskyKit</text>
+  <text x="925" y="44" fill="white" font-family="Arial" font-size="17">Campus</text>
+  <text x="60" y="126" fill="#182b49" font-family="Arial" font-size="31" font-weight="bold">Share a Campus Life experience</text>
+  <rect x="60" y="160" width="960" height="660" rx="12" fill="white" stroke="#c9d1db"/>
+  <text x="95" y="204" fill="#182b49" font-family="Arial" font-size="15">Title</text>
+  <rect x="95" y="216" width="890" height="42" rx="6" fill="#fff" stroke="#8b98aa"/>
+  <text x="110" y="243" fill="#69788c" font-family="Arial" font-size="15">Give your post a clear title</text>
+  <text x="95" y="292" fill="#182b49" font-family="Arial" font-size="15">Topic</text>
+  <rect x="95" y="304" width="275" height="42" rx="6" fill="#fff" stroke="#8b98aa"/>
+  <text x="110" y="331" fill="#69788c" font-family="Arial" font-size="15">Choose topic  ▾</text>
+  <text x="390" y="292" fill="#182b49" font-family="Arial" font-size="15">Neighborhood</text>
+  <rect x="390" y="304" width="275" height="42" rx="6" fill="#fff" stroke="#8b98aa"/>
+  <text x="405" y="331" fill="#69788c" font-family="Arial" font-size="15">Choose area  ▾</text>
+  <text x="685" y="292" fill="#182b49" font-family="Arial" font-size="15">Budget level</text>
+  <rect x="685" y="304" width="300" height="42" rx="6" fill="#fff" stroke="#8b98aa"/>
+  <text x="700" y="331" fill="#69788c" font-family="Arial" font-size="15">Choose budget  ▾</text>
+  <text x="95" y="382" fill="#182b49" font-family="Arial" font-size="15">Location</text>
+  <rect x="95" y="394" width="890" height="42" rx="6" fill="#fff" stroke="#8b98aa"/>
+  <text x="110" y="421" fill="#69788c" font-family="Arial" font-size="15">Where did this happen?</text>
+  <text x="95" y="472" fill="#182b49" font-family="Arial" font-size="15">Your experience</text>
+  <rect x="95" y="484" width="890" height="106" rx="6" fill="#fff" stroke="#8b98aa"/>
+  <text x="110" y="512" fill="#69788c" font-family="Arial" font-size="15">Describe what you learned...</text>
+  <text x="95" y="626" fill="#182b49" font-family="Arial" font-size="15">Tips for other students</text>
+  <rect x="95" y="638" width="890" height="86" rx="6" fill="#fff" stroke="#8b98aa"/>
+  <text x="110" y="666" fill="#69788c" font-family="Arial" font-size="15">Add practical tips...</text>
+  <rect x="95" y="750" width="130" height="44" rx="7" fill="#bd2734"/>
+  <text x="124" y="778" fill="white" font-family="Arial" font-size="16" font-weight="bold">Save post</text>
+  <text x="246" y="778" fill="#4d5a6c" font-family="Arial" font-size="15">Cancel</text>
+  <text x="60" y="861" fill="#69788c" font-family="Arial" font-size="14">Layout draft · Form is available only to signed-in students</text>
+</svg>

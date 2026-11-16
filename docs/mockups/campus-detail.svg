@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="780" viewBox="0 0 1080 780">
+  <rect width="1080" height="780" fill="#f6f7f9"/>
+  <rect width="1080" height="70" fill="#182b49"/>
+  <text x="60" y="45" fill="white" font-family="Arial" font-size="26" font-weight="bold">HuskyKit</text>
+  <text x="925" y="44" fill="white" font-family="Arial" font-size="17">Campus</text>
+  <text x="60" y="124" fill="#bd2734" font-family="Arial" font-size="16">← Back to Campus Life</text>
+  <rect x="60" y="155" width="960" height="555" rx="12" fill="white" stroke="#c9d1db"/>
+  <text x="95" y="213" fill="#182b49" font-family="Arial" font-size="30" font-weight="bold">Finding affordable food near campus</text>
+  <text x="95" y="250" fill="#4d5a6c" font-family="Arial" font-size="16">Food  ·  Fenway  ·  Low budget</text>
+  <line x1="95" y1="278" x2="985" y2="278" stroke="#d8dee6"/>
+  <text x="95" y="316" fill="#182b49" font-family="Arial" font-size="17" font-weight="bold">Location</text>
+  <text x="95" y="344" fill="#4d5a6c" font-family="Arial" font-size="16">Fenway, Boston area</text>
+  <text x="95" y="392" fill="#182b49" font-family="Arial" font-size="17" font-weight="bold">Experience</text>
+  <text x="95" y="420" fill="#4d5a6c" font-family="Arial" font-size="16">Full experience text goes here. This section may span several paragraphs.</text>
+  <text x="95" y="470" fill="#182b49" font-family="Arial" font-size="17" font-weight="bold">Tips</text>
+  <text x="95" y="498" fill="#4d5a6c" font-family="Arial" font-size="16">Practical advice shared by the author goes here.</text>
+  <line x1="95" y1="538" x2="985" y2="538" stroke="#d8dee6"/>
+  <text x="95" y="573" fill="#4d5a6c" font-family="Arial" font-size="15">By Alex  ·  Updated November 2026</text>
+  <rect x="95" y="612" width="90" height="42" rx="7" fill="#182b49"/>
+  <text x="124" y="638" fill="white" font-family="Arial" font-size="15">Edit</text>
+  <rect x="199" y="612" width="100" height="42" rx="7" fill="#bd2734"/>
+  <text x="227" y="638" fill="white" font-family="Arial" font-size="15">Delete</text>
+  <text x="320" y="639" fill="#69788c" font-family="Arial" font-size="13">Owner actions only</text>
+</svg>

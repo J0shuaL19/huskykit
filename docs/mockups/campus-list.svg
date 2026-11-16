@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="780" viewBox="0 0 1080 780">
+  <rect width="1080" height="780" fill="#f6f7f9"/>
+  <rect width="1080" height="70" fill="#182b49"/>
+  <text x="60" y="45" fill="white" font-family="Arial" font-size="26" font-weight="bold">HuskyKit</text>
+  <text x="740" y="44" fill="white" font-family="Arial" font-size="17">Home</text>
+  <text x="815" y="44" fill="white" font-family="Arial" font-size="17">Academic</text>
+  <text x="925" y="44" fill="white" font-family="Arial" font-size="17">Campus</text>
+  <text x="60" y="132" fill="#182b49" font-family="Arial" font-size="32" font-weight="bold">Campus Life Experiences</text>
+  <text x="60" y="164" fill="#4d5a6c" font-family="Arial" font-size="16">Explore student experiences about housing, travel, food, and activities.</text>
+  <rect x="60" y="198" width="960" height="126" rx="12" fill="white" stroke="#c9d1db"/>
+  <text x="80" y="226" fill="#182b49" font-family="Arial" font-size="14">Keyword</text>
+  <rect x="80" y="236" width="250" height="44" rx="6" fill="#fff" stroke="#8b98aa"/>
+  <text x="94" y="264" fill="#69788c" font-family="Arial" font-size="15">Search posts...</text>
+  <text x="350" y="226" fill="#182b49" font-family="Arial" font-size="14">Topic</text>
+  <rect x="350" y="236" width="190" height="44" rx="6" fill="#fff" stroke="#8b98aa"/>
+  <text x="365" y="264" fill="#4d5a6c" font-family="Arial" font-size="15">All topics  ▾</text>
+  <text x="560" y="226" fill="#182b49" font-family="Arial" font-size="14">Neighborhood</text>
+  <rect x="560" y="236" width="200" height="44" rx="6" fill="#fff" stroke="#8b98aa"/>
+  <text x="575" y="264" fill="#4d5a6c" font-family="Arial" font-size="15">All areas  ▾</text>
+  <text x="780" y="226" fill="#182b49" font-family="Arial" font-size="14">Budget</text>
+  <rect x="780" y="236" width="220" height="44" rx="6" fill="#fff" stroke="#8b98aa"/>
+  <text x="795" y="264" fill="#4d5a6c" font-family="Arial" font-size="15">Any budget  ▾</text>
+  <text x="60" y="365" fill="#182b49" font-family="Arial" font-size="18" font-weight="bold">Results</text>
+  <rect x="815" y="339" width="205" height="42" rx="7" fill="#bd2734"/>
+  <text x="845" y="366" fill="white" font-family="Arial" font-size="16" font-weight="bold">Share experience</text>
+  <rect x="60" y="401" width="960" height="143" rx="12" fill="white" stroke="#c9d1db"/>
+  <text x="82" y="435" fill="#182b49" font-family="Arial" font-size="21" font-weight="bold">Finding affordable food near campus</text>
+  <text x="82" y="466" fill="#4d5a6c" font-family="Arial" font-size="15">Food  ·  Fenway  ·  Low budget</text>
+  <text x="82" y="495" fill="#4d5a6c" font-family="Arial" font-size="15">A short preview of a student's experience and practical tips...</text>
+  <text x="82" y="526" fill="#bd2734" font-family="Arial" font-size="15">Read post →</text>
+  <rect x="60" y="560" width="960" height="143" rx="12" fill="white" stroke="#c9d1db"/>
+  <text x="82" y="594" fill="#182b49" font-family="Arial" font-size="21" font-weight="bold">Commuting from Mission Hill</text>
+  <text x="82" y="625" fill="#4d5a6c" font-family="Arial" font-size="15">Commuting  ·  Mission Hill  ·  Medium budget</text>
+  <text x="82" y="654" fill="#4d5a6c" font-family="Arial" font-size="15">A short preview of route choices and daily travel...</text>
+  <text x="82" y="685" fill="#bd2734" font-family="Arial" font-size="15">Read post →</text>
+  <text x="459" y="746" fill="#4d5a6c" font-family="Arial" font-size="15">← Previous   1 / 5   Next →</text>
+</svg>
