@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node src/server.js",
-    "check": "node --check src/server.js && node --check src/db/client.js && node --check src/routes/campus.js",
+    "seed:campus": "node scripts/seedCampus.js",
+    "check": "node --check src/server.js && node --check src/db/client.js && node --check src/routes/campus.js && node --check scripts/seedCampus.js",
     "test": "node --test"
   },
   "dependencies": {
