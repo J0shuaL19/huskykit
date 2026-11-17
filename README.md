@@ -1,6 +1,6 @@
 # HuskyKit
 
-HuskyKit is a planned community website where Northeastern students can share academic and campus life experiences. Visitors will be able to browse and search posts; registered users will be able to manage their own posts.
+HuskyKit is a community website where Northeastern students can share academic and campus life experiences. Visitors can browse and search posts; registered users can create posts and manage their own posts.
 
 ## Authors
 
@@ -9,9 +9,23 @@ HuskyKit is a planned community website where Northeastern students can share ac
 
 ## Project status
 
-The Campus Life public read API, a 1,000-post synthetic seed script, and React browse/detail pages are implemented. The seed script and read API have been verified against an Atlas database. Write operations, authentication, deployment, and screenshots have not been added yet.
+The Academic Experiences and Campus Life Experiences sections each have their own MongoDB collection, Express CRUD API, and React pages. Passport sessions protect writes and the backend enforces post ownership. The Atlas database contains 1,000 clearly marked synthetic posts in each section. Public deployment and final submission checks are still pending.
 
-## Planned stack
+## Project objective
+
+HuskyKit makes advice about courses, studying, housing, commuting, food, and local activities easier to find than in a group chat. Readers can search and filter either section without an account. Students can register, publish their own experiences, and edit or delete only their own posts.
+
+## Screenshot
+
+![HuskyKit home page](docs/screenshots/home.png)
+
+Additional local screenshots are in [docs/screenshots](docs/screenshots). The [Academic design](docs/academic-design.md) and [Campus Life design](docs/campus-design.md) include user stories and mockups.
+
+## Class link
+
+[CS 5610 Web Development (Online), Fall 2026](https://www.johnalexis.com/classes/webDevelopment_online_fall_2026/)
+
+## Stack
 
 - Frontend: React with Hooks, React Router, Fetch API, PropTypes
 - Backend: Node.js and Express
@@ -22,17 +36,36 @@ The Campus Life public read API, a 1,000-post synthetic seed script, and React b
 
 - `frontend/`: React client, page and component styles, and Vite configuration
 - `backend/`: Express API, database access, authentication, and seed scripts
-- `docs/`: Campus Life design draft and mockups; the full team design document is still pending
+- `docs/`: design documents, mockups, and local application screenshots
 
-## Course and build information
+## Build and run locally
 
-The backend requires Node.js, npm, and a MongoDB connection. In the backend directory, run npm install, set MONGODB_URI (and optionally MONGODB_DB and PORT) using backend/.env.example as a reference, then run npm start. The API provides GET /api/health, GET /api/campus-posts, and GET /api/campus-posts/:id. The list endpoint accepts keyword, topic, neighborhood, budgetLevel, and page. It returns 20 posts per page.
+Use Node.js 22.13 or newer, npm, and a MongoDB database. Copy `backend/.env.example` to `backend/.env` and set `MONGODB_URI`, `MONGODB_DB`, and a random `SESSION_SECRET` of at least 32 characters. Keep `backend/.env` out of Git. Separate `MONGODB_USERNAME` and `MONGODB_PASSWORD` variables are not used by the app; credentials belong in the MongoDB connection URI.
 
-For Atlas, create a cluster and a database user, allow your current IP address, and copy the Node.js driver connection string. Save it as MONGODB_URI in a local .env file and optionally set MONGODB_DB=huskykit. Do not commit that file or share the password. If .env is in the project root, run node --env-file=../.env scripts/seedCampus.js from backend to add 1,000 labeled synthetic Campus Life posts, then run node --env-file=../.env src/server.js to serve them. Running the seed command again only fills missing demo posts. The backend reads MONGODB_URI directly; separate MONGODB_USERNAME and MONGODB_PASSWORD variables are not currently used.
+From the repository root:
 
-In a second terminal, run npm install and npm run dev from frontend. Open http://127.0.0.1:5173. Vite proxies /api to the backend on port 3000, so no CORS package is needed. Run npm run build, npm run lint, and npm run format:check in frontend to validate this stage.
+```sh
+npm ci --prefix backend
+npm ci --prefix frontend
+npm run seed:academic --prefix backend
+npm run seed:campus --prefix backend
+npm run build --prefix frontend
+npm start --prefix backend
+```
 
-The course link, screenshots, and production deployment instructions will be added as those parts become available.
+The seed scripts are additive and safe to run again. Open `http://localhost:3000` for the built frontend. For development, run `npm run dev --prefix frontend` in a second terminal and open `http://localhost:5173`; Vite proxies API requests to the backend on port 3000.
+
+Run `npm test --prefix backend`, `npm run lint --prefix backend`, `npm run lint --prefix frontend`, and `npm run build --prefix frontend` for the main checks. See [development notes](docs/development.md) for the isolated MongoDB integration tests and deployment details.
+
+## Deployment preparation
+
+The backend serves the built React app from the same origin as its API. A Node web service can build from the repository root with:
+
+```sh
+npm ci --prefix backend && npm ci --prefix frontend && npm run build --prefix frontend
+```
+
+Start it with `npm start --prefix backend`. Set `MONGODB_URI`, `MONGODB_DB`, `SESSION_SECRET`, and `NODE_ENV=production` in the host's secret environment settings. The public URL will be added after deployment and a live smoke test.
 
 ## AI disclosure
 
