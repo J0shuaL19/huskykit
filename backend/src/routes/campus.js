@@ -45,7 +45,12 @@ function createCampusRouter(collection) {
 
       const pageSize = 20;
       const [posts, total] = await Promise.all([
-        collection.find(query).sort({ updatedAt: -1, _id: -1 }).skip((page - 1) * pageSize).limit(pageSize).toArray(),
+        collection
+          .find(query)
+          .sort({ updatedAt: -1, _id: -1 })
+          .skip((page - 1) * pageSize)
+          .limit(pageSize)
+          .toArray(),
         collection.countDocuments(query),
       ]);
       return res.json({ posts: posts.map(publicPost), page, pageSize, total });

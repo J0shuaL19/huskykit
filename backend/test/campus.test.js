@@ -21,13 +21,23 @@ test('campus read API filters posts and returns details', async () => {
     find(query) {
       capturedQuery = query;
       return {
-        sort() { return this; },
-        skip() { return this; },
-        limit() { return this; },
-        async toArray() { return [post]; },
+        sort() {
+          return this;
+        },
+        skip() {
+          return this;
+        },
+        limit() {
+          return this;
+        },
+        async toArray() {
+          return [post];
+        },
       };
     },
-    async countDocuments() { return 1; },
+    async countDocuments() {
+      return 1;
+    },
     async findOne(query) {
       return query._id.equals(id) ? post : null;
     },
@@ -38,7 +48,9 @@ test('campus read API filters posts and returns details', async () => {
   const base = 'http://127.0.0.1:' + server.address().port;
 
   try {
-    const list = await fetch(base + '/api/campus-posts?keyword=food.%2A&topic=food&neighborhood=Fenway&budgetLevel=low');
+    const list = await fetch(
+      base + '/api/campus-posts?keyword=food.%2A&topic=food&neighborhood=Fenway&budgetLevel=low',
+    );
     assert.equal(list.status, 200);
     const result = await list.json();
     assert.equal(result.total, 1);
