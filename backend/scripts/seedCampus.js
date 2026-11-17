@@ -2,8 +2,16 @@ const { connectDatabase, closeDatabase } = require('../src/db/client');
 
 const TOPICS = ['housing', 'commuting', 'food', 'activities'];
 const NEIGHBORHOODS = [
-  'Fenway', 'Mission Hill', 'Back Bay', 'Allston', 'Cambridge',
-  'Roxbury', 'South End', 'Downtown', 'East Boston', 'Brookline',
+  'Fenway',
+  'Mission Hill',
+  'Back Bay',
+  'Allston',
+  'Cambridge',
+  'Roxbury',
+  'South End',
+  'Downtown',
+  'East Boston',
+  'Brookline',
 ];
 const BUDGET_LEVELS = ['low', 'medium', 'high'];
 
@@ -11,7 +19,10 @@ function buildCampusPosts(count = 1000) {
   return Array.from({ length: count }, (_, index) => {
     const topic = TOPICS[index % TOPICS.length];
     const neighborhood = NEIGHBORHOODS[Math.floor(index / TOPICS.length) % NEIGHBORHOODS.length];
-    const budgetLevel = BUDGET_LEVELS[Math.floor(index / (TOPICS.length * NEIGHBORHOODS.length)) % BUDGET_LEVELS.length];
+    const budgetLevel =
+      BUDGET_LEVELS[
+        Math.floor(index / (TOPICS.length * NEIGHBORHOODS.length)) % BUDGET_LEVELS.length
+      ];
     const date = new Date(Date.UTC(2026, 0, 1 + (index % 180)));
 
     return {
@@ -54,7 +65,9 @@ async function seedCampus() {
       inserted += result.upsertedCount;
     }
     console.log('Campus demo posts inserted: ' + inserted);
-    console.log('Campus demo posts in database: ' + await collection.countDocuments({ isSynthetic: true }));
+    console.log(
+      'Campus demo posts in database: ' + (await collection.countDocuments({ isSynthetic: true })),
+    );
   } finally {
     await closeDatabase();
   }

@@ -10,6 +10,7 @@ export default [
         URLSearchParams: 'readonly',
         document: 'readonly',
         fetch: 'readonly',
+        FormData: 'readonly',
       },
     },
     rules: {

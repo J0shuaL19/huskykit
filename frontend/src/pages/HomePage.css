@@ -100,14 +100,15 @@ a.home-page__card:hover {
   font-weight: 700;
 }
 
-.home-page__card--pending {
-  background: #f9fafb;
+.home-page__instructions {
+  margin-top: 36px;
+  padding: 26px;
+  border-top: 1px solid #d6dde6;
+  color: #526174;
+  line-height: 1.8;
 }
-
-.home-page__coming {
-  color: #6d7886;
-  font-size: 14px;
-  font-weight: 700;
+.home-page__instructions h2 {
+  color: #182b49;
 }
 
 @media (max-width: 700px) {

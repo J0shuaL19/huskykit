@@ -1,0 +1,79 @@
+.academic-post-form {
+  padding: 30px;
+  background: #fff;
+  border: 1px solid #d6dde6;
+  border-radius: 13px;
+}
+.academic-post-form > p {
+  margin-top: 0;
+  color: #526174;
+  line-height: 1.6;
+}
+.academic-post-form fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+.academic-post-form__legend {
+  font-weight: 700;
+  margin: 12px 0;
+}
+.academic-post-form label {
+  display: grid;
+  gap: 9px;
+  margin: 0 0 22px;
+  font-weight: 700;
+}
+.academic-post-form__row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+.academic-post-form input,
+.academic-post-form select,
+.academic-post-form textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 12px;
+  font: inherit;
+  font-weight: 400;
+  color: #182b49;
+  background: #fff;
+  border: 1px solid #9daaba;
+  border-radius: 7px;
+}
+.academic-post-form textarea {
+  resize: vertical;
+  line-height: 1.6;
+}
+.academic-post-form__actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.academic-post-form button {
+  padding: 13px 20px;
+  border: 0;
+  border-radius: 7px;
+  background: #b42333;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+.academic-post-form button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+.academic-post-form .academic-post-form__error {
+  color: #8e1c2b;
+}
+@media (max-width: 700px) {
+  .academic-post-form__row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .academic-post-form {
+    padding: 22px;
+  }
+}

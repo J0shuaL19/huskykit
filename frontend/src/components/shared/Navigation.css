@@ -62,3 +62,38 @@
     padding: 14px 0;
   }
 }
+.site-header__nav {
+  flex-wrap: wrap;
+}
+.site-header__nav button {
+  padding: 9px 12px;
+  color: #fff;
+  background: transparent;
+  border: 1px solid #8f9eb4;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.site-header__user {
+  max-width: 140px;
+  overflow-wrap: anywhere;
+  font-size: 14px;
+}
+.site-header__error {
+  margin: 0;
+  padding: 12px 20px;
+  background: #fff0f2;
+  color: #8e1c2b;
+}
+@media (max-width: 850px) {
+  .site-header__inner {
+    flex-wrap: wrap;
+    padding: 14px 0;
+    gap: 10px;
+  }
+  .site-header__nav {
+    gap: 4px;
+  }
+  .site-header__nav a {
+    padding: 8px;
+  }
+}

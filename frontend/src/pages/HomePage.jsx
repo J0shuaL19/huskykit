@@ -30,15 +30,30 @@ function HomePage() {
             <p>Housing, commuting, affordable food, and things to do around Boston.</p>
             <span className="home-page__card-link">Browse posts →</span>
           </Link>
-          <div className="home-page__card home-page__card--pending">
+          <Link className="home-page__card" to="/academic">
             <span className="home-page__card-icon" aria-hidden="true">
               ▦
             </span>
             <h3>Academic Experiences</h3>
             <p>Study tips, course planning, group projects, and academic resources.</p>
-            <span className="home-page__coming">Coming soon</span>
-          </div>
+            <span className="home-page__card-link">Browse posts →</span>
+          </Link>
         </div>
+      </section>
+      <section className="home-page__instructions" aria-labelledby="how-heading">
+        <h2 id="how-heading">How to use HuskyKit</h2>
+        <ol>
+          <li>Choose a section, search by keyword, and apply filters.</li>
+          <li>Open a post to read the experience, tips, author, and last update.</li>
+          <li>
+            Register or log in to share an academic experience. Your own posts show Edit and Delete
+            actions.
+          </li>
+        </ol>
+        <p>
+          Posts labeled “Demo” are synthetic examples. Check official resources for current
+          information.
+        </p>
       </section>
     </div>
   );

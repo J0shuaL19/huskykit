@@ -3,6 +3,10 @@ import Navigation from './components/shared/Navigation';
 import HomePage from './pages/HomePage';
 import CampusListPage from './pages/CampusListPage';
 import CampusDetailPage from './pages/CampusDetailPage';
+import AcademicListPage from './pages/AcademicListPage';
+import AcademicDetailPage from './pages/AcademicDetailPage';
+import AcademicFormPage from './pages/AcademicFormPage';
+import AuthPage from './pages/AuthPage';
 import './App.css';
 
 function App() {
@@ -14,6 +18,12 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/campus" element={<CampusListPage />} />
           <Route path="/campus/:id" element={<CampusDetailPage />} />
+          <Route path="/academic" element={<AcademicListPage />} />
+          <Route path="/academic/new" element={<AcademicFormPage />} />
+          <Route path="/academic/:id" element={<AcademicDetailPage />} />
+          <Route path="/academic/:id/edit" element={<AcademicFormPage />} />
+          <Route path="/login" element={<AuthPage key="login" mode="login" />} />
+          <Route path="/register" element={<AuthPage key="register" mode="register" />} />
           <Route
             path="*"
             element={
