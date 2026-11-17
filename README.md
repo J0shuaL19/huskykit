@@ -76,7 +76,7 @@ Start it with `npm start --prefix backend`. Set `MONGODB_URI`, `MONGODB_DB`, `SE
 
 ## AI disclosure
 
-AI assistance was used for the initial repository structure and documentation, Campus Life read API, synthetic seed script, React browse/detail pages, design draft, mockups, and related tests. Further AI assistance will be disclosed here as the project develops.
+AI assistance was used for the initial repository structure and documentation, synthetic seed script, design draft, mockups, and related tests. Further AI assistance will be disclosed here as the project develops.
 
 ## License
 
