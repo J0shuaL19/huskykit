@@ -9,7 +9,9 @@ HuskyKit is a community website where Northeastern students can share academic a
 
 ## Project status
 
-The Academic Experiences and Campus Life Experiences sections each have their own MongoDB collection, Express CRUD API, and React pages. Passport sessions protect writes and the backend enforces post ownership. The Atlas database contains 1,000 clearly marked synthetic posts in each section. Public deployment and final submission checks are still pending.
+The Academic Experiences and Campus Life Experiences sections each have their own MongoDB collection, Express CRUD API, and React pages. Passport sessions protect writes and the backend enforces post ownership. The Atlas database contains 1,000 clearly marked synthetic posts in each section. The app is deployed publicly; final submission checks are still pending.
+
+**Live site:** [HuskyKit](https://huskykit.onrender.com/)
 
 ## Project objective
 
@@ -57,7 +59,7 @@ The seed scripts are additive and safe to run again. Open `http://localhost:3000
 
 Run `npm test --prefix backend`, `npm run lint --prefix backend`, `npm run lint --prefix frontend`, and `npm run build --prefix frontend` for the main checks. See [development notes](docs/development.md) for the isolated MongoDB integration tests and deployment details.
 
-## Deployment preparation
+## Deployment
 
 The backend serves the built React app from the same origin as its API. A Node web service can build from the repository root with:
 
@@ -65,7 +67,7 @@ The backend serves the built React app from the same origin as its API. A Node w
 npm ci --prefix backend && npm ci --prefix frontend && npm run build --prefix frontend
 ```
 
-Start it with `npm start --prefix backend`. Set `MONGODB_URI`, `MONGODB_DB`, `SESSION_SECRET`, and `NODE_ENV=production` in the host's secret environment settings. The public URL will be added after deployment and a live smoke test.
+Start it with `npm start --prefix backend`. Set `MONGODB_URI`, `MONGODB_DB`, `SESSION_SECRET`, and `NODE_ENV=production` in the host's secret environment settings. The public deployment is at [huskykit.onrender.com](https://huskykit.onrender.com/).
 
 ## AI disclosure
 
