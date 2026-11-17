@@ -13,6 +13,11 @@ The Academic Experiences and Campus Life Experiences sections each have their ow
 
 **Live site:** [HuskyKit](https://huskykit.onrender.com/)
 
+## Demo videos
+
+- [Ziyong Liu's demonstration](https://drive.google.com/file/d/1tsqCS2g-BPfNMZw0CeOi3zPc-2cvw_q_/view?usp=sharing)
+- [Chunzhang Liu's demonstration](https://drive.google.com/file/d/1cMq0b0jM-QbGvDBUrs_roTdzSbpVj66Q/view?usp=sharing)
+
 ## Project objective
 
 HuskyKit makes advice about courses, studying, housing, commuting, food, and local activities easier to find than in a group chat. Readers can search and filter either section without an account. Students can register, publish their own experiences, and edit or delete only their own posts.
