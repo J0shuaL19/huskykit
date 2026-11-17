@@ -1,0 +1,124 @@
+.campus-detail {
+  padding-top: 38px;
+}
+
+.campus-detail__back {
+  color: #b42333;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.campus-detail__back:hover {
+  text-decoration: underline;
+}
+
+.campus-detail__article {
+  margin-top: 22px;
+  padding: 42px;
+  border: 1px solid #d6dde6;
+  border-radius: 13px;
+  background: #fff;
+  box-shadow: 0 8px 28px rgb(24 43 73 / 4%);
+}
+
+.campus-detail__tags {
+  display: flex;
+  gap: 9px;
+}
+
+.campus-detail__tags span {
+  padding: 6px 9px;
+  border-radius: 5px;
+  background: #eef2f7;
+  color: #344a68;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+.campus-detail__tags .campus-detail__demo {
+  background: #fff0e9;
+  color: #9c4a1b;
+}
+
+.campus-detail h1 {
+  margin: 20px 0 10px;
+  font-size: clamp(29px, 4vw, 40px);
+  letter-spacing: -0.045em;
+}
+
+.campus-detail__summary {
+  margin: 0;
+  color: #526174;
+  text-transform: capitalize;
+}
+
+.campus-detail__summary span {
+  margin: 0 6px;
+}
+
+.campus-detail__facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin: 30px 0;
+  padding: 22px 0;
+  border-top: 1px solid #e3e8ee;
+  border-bottom: 1px solid #e3e8ee;
+}
+
+.campus-detail__facts dt {
+  margin-bottom: 8px;
+  color: #657386;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.campus-detail__facts dd {
+  margin: 0;
+  color: #253955;
+  overflow-wrap: anywhere;
+}
+
+.campus-detail__article section + section {
+  margin-top: 28px;
+}
+
+.campus-detail__article h2 {
+  margin: 0 0 10px;
+  font-size: 21px;
+}
+
+.campus-detail__article section p {
+  margin: 0;
+  color: #3d4c60;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+.campus-detail__message {
+  margin-top: 22px;
+  padding: 30px;
+  border: 1px solid #d6dde6;
+  border-radius: 12px;
+  background: #fff;
+  color: #526174;
+}
+
+.campus-detail__message--error {
+  border-color: #edb9c0;
+  background: #fff7f8;
+  color: #8e1c2b;
+}
+
+@media (max-width: 650px) {
+  .campus-detail__article {
+    padding: 26px;
+  }
+
+  .campus-detail__facts {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+}

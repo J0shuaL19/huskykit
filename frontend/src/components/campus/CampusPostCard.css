@@ -1,0 +1,92 @@
+.campus-post-card {
+  padding: 25px 28px;
+  border: 1px solid #d6dde6;
+  border-radius: 13px;
+  background: #fff;
+  box-shadow: 0 7px 24px rgb(24 43 73 / 4%);
+}
+
+.campus-post-card__topline {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.campus-post-card__topic,
+.campus-post-card__demo {
+  padding: 5px 8px;
+  border-radius: 5px;
+  background: #eef2f7;
+  color: #344a68;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+.campus-post-card__demo {
+  background: #fff0e9;
+  color: #9c4a1b;
+}
+
+.campus-post-card h2 {
+  margin: 15px 0 8px;
+  font-size: 21px;
+  letter-spacing: -0.025em;
+}
+
+.campus-post-card h2 a {
+  text-decoration: none;
+}
+
+.campus-post-card h2 a:hover {
+  color: #b42333;
+  text-decoration: underline;
+}
+
+.campus-post-card__meta {
+  margin: 0;
+  color: #526174;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.campus-post-card__meta span {
+  margin: 0 5px;
+}
+
+.campus-post-card__preview {
+  display: -webkit-box;
+  overflow: hidden;
+  margin: 18px 0 22px;
+  color: #3d4c60;
+  line-height: 1.55;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.campus-post-card__footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 15px;
+  border-top: 1px solid #e3e8ee;
+  color: #657386;
+  font-size: 14px;
+}
+
+.campus-post-card__footer a {
+  color: #b42333;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+@media (max-width: 520px) {
+  .campus-post-card {
+    padding: 22px;
+  }
+
+  .campus-post-card__footer {
+    flex-direction: column;
+    gap: 9px;
+  }
+}

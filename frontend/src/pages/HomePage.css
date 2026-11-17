@@ -1,0 +1,121 @@
+.home-page__hero {
+  margin: 44px 0 56px;
+  padding: 64px 72px;
+  border-radius: 18px;
+  background: linear-gradient(125deg, #182b49 0%, #263e60 72%, #73454f 100%);
+  color: #fff;
+}
+
+.home-page__eyebrow {
+  margin: 0 0 18px;
+  color: #ffd8de;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.home-page__hero h1 {
+  max-width: 640px;
+  margin: 0;
+  font-size: clamp(38px, 5vw, 62px);
+  letter-spacing: -0.055em;
+  line-height: 1.05;
+}
+
+.home-page__hero > p:not(.home-page__eyebrow) {
+  max-width: 570px;
+  margin: 22px 0 32px;
+  color: #e0e6ef;
+  font-size: 19px;
+  line-height: 1.55;
+}
+
+.home-page__cta {
+  display: inline-flex;
+  gap: 18px;
+  align-items: center;
+  padding: 14px 20px;
+  border-radius: 8px;
+  background: #c82c3d;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.home-page__cta:hover {
+  background: #a91f30;
+}
+
+.home-page__section-heading h2 {
+  margin: 0 0 8px;
+  font-size: 28px;
+}
+
+.home-page__section-heading p {
+  margin: 0 0 22px;
+  color: #526174;
+}
+
+.home-page__cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.home-page__card {
+  min-height: 230px;
+  padding: 26px;
+  border: 1px solid #d6dde6;
+  border-radius: 13px;
+  background: #fff;
+  text-decoration: none;
+  box-shadow: 0 8px 28px rgb(24 43 73 / 4%);
+}
+
+a.home-page__card:hover {
+  border-color: #aebccc;
+  transform: translateY(-2px);
+}
+
+.home-page__card-icon {
+  color: #b42333;
+  font-size: 29px;
+}
+
+.home-page__card h3 {
+  margin: 14px 0 9px;
+  font-size: 22px;
+}
+
+.home-page__card p {
+  max-width: 370px;
+  margin: 0 0 20px;
+  color: #526174;
+  line-height: 1.5;
+}
+
+.home-page__card-link {
+  color: #b42333;
+  font-weight: 700;
+}
+
+.home-page__card--pending {
+  background: #f9fafb;
+}
+
+.home-page__coming {
+  color: #6d7886;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+@media (max-width: 700px) {
+  .home-page__hero {
+    padding: 46px 28px;
+  }
+
+  .home-page__cards {
+    grid-template-columns: 1fr;
+  }
+}
