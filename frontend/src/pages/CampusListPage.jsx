@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
+import { useAuth } from '../auth/AuthContext';
 import { getCampusPosts } from '../api/campus';
 import CampusFilters from '../components/campus/CampusFilters';
 import CampusPostCard from '../components/campus/CampusPostCard';
 import './CampusListPage.css';
 
 function CampusListPage() {
+  const { user } = useAuth();
   const [searchParams, setSearchParams] = useSearchParams();
   const query = searchParams.toString();
   const [result, setResult] = useState(null);
@@ -56,6 +58,9 @@ function CampusListPage() {
         <p className="campus-list__eyebrow">Explore experiences</p>
         <h1>Campus Life</h1>
         <p>Find student perspectives on housing, commuting, food, and local activities.</p>
+        <Link className="campus-list__create" to={user ? '/campus/new' : '/login?next=/campus/new'}>
+          Share an experience →
+        </Link>
       </div>
       <CampusFilters values={values} onApply={applyFilters} onClear={() => setSearchParams({})} />
 

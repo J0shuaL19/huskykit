@@ -1,3 +1,5 @@
+import { request } from './request';
+
 async function readJson(response) {
   const data = await response.json().catch(() => ({}));
   if (!response.ok) {
@@ -16,3 +18,11 @@ export async function getCampusPost(id, signal) {
   const response = await fetch('/api/campus-posts/' + encodeURIComponent(id), { signal });
   return readJson(response);
 }
+export const saveCampusPost = (post, id) =>
+  request('/campus-posts' + (id ? '/' + encodeURIComponent(id) : ''), {
+    method: id ? 'PUT' : 'POST',
+    body: post,
+  });
+
+export const deleteCampusPost = (id) =>
+  request('/campus-posts/' + encodeURIComponent(id), { method: 'DELETE' });

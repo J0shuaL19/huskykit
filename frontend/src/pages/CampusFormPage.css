@@ -1,0 +1,21 @@
+.campus-form-page {
+  max-width: 900px;
+  padding-top: 36px;
+}
+
+.campus-form-page > a {
+  color: #b42333;
+  font-weight: 700;
+}
+
+.campus-form-page h1 {
+  margin: 24px 0;
+  font-size: clamp(26px, 4vw, 36px);
+}
+
+.campus-form-page > [role='alert'] {
+  padding: 24px;
+  border-radius: 8px;
+  background: #fff7f8;
+  color: #8e1c2b;
+}

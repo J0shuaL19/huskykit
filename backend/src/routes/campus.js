@@ -1,5 +1,7 @@
 const express = require('express');
 const { ObjectId } = require('mongodb');
+const { requireAuth } = require('../auth/passport');
+const { validateCampusPost } = require('../db/campus');
 
 const FILTER_FIELDS = ['topic', 'neighborhood', 'budgetLevel'];
 
@@ -70,6 +72,53 @@ function createCampusRouter(collection) {
     } catch (error) {
       return next(error);
     }
+  });
+
+  router.post('/', requireAuth, async (req, res) => {
+    const { fields, error } = validateCampusPost(req.body);
+    if (error) return res.status(400).json({ error });
+    const post = {
+      ...fields,
+      authorId: req.user._id.toString(),
+      author: req.user.displayName,
+      createdAt: new Date(),
+      updatedAt: new Date(),
+      isSynthetic: false,
+    };
+    const { insertedId } = await collection.insertOne(post);
+    return res.status(201).json(publicPost({ ...post, _id: insertedId }));
+  });
+
+  async function requireOwner(req, res, next) {
+    if (!ObjectId.isValid(req.params.id)) return res.status(400).json({ error: 'Invalid post ID' });
+    req.postId = new ObjectId(req.params.id);
+    const post = await collection.findOne({ _id: req.postId });
+    if (!post) return res.status(404).json({ error: 'Post not found' });
+    if (post.authorId !== req.user._id.toString()) {
+      return res.status(403).json({ error: 'Only the author can change this post.' });
+    }
+    return next();
+  }
+
+  router.put('/:id', requireAuth, requireOwner, async (req, res) => {
+    const { fields, error } = validateCampusPost(req.body);
+    if (error) return res.status(400).json({ error });
+    const post = await collection.findOneAndUpdate(
+      { _id: req.postId, authorId: req.user._id.toString() },
+      { $set: { ...fields, updatedAt: new Date() } },
+      { returnDocument: 'after' },
+    );
+    if (!post) return res.status(404).json({ error: 'Post not found' });
+    return res.json(publicPost(post));
+  });
+
+  router.delete('/:id', requireAuth, requireOwner, async (req, res) => {
+    const result = await collection.deleteOne({
+      _id: req.postId,
+      authorId: req.user._id.toString(),
+    });
+    if (!result.deletedCount) return res.status(404).json({ error: 'Post not found' });
+    return res.status(204).end();
   });
 
   return router;

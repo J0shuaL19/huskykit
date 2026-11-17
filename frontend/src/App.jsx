@@ -3,6 +3,7 @@ import Navigation from './components/shared/Navigation';
 import HomePage from './pages/HomePage';
 import CampusListPage from './pages/CampusListPage';
 import CampusDetailPage from './pages/CampusDetailPage';
+import CampusFormPage from './pages/CampusFormPage';
 import AcademicListPage from './pages/AcademicListPage';
 import AcademicDetailPage from './pages/AcademicDetailPage';
 import AcademicFormPage from './pages/AcademicFormPage';
@@ -17,7 +18,9 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/campus" element={<CampusListPage />} />
+          <Route path="/campus/new" element={<CampusFormPage />} />
           <Route path="/campus/:id" element={<CampusDetailPage />} />
+          <Route path="/campus/:id/edit" element={<CampusFormPage />} />
           <Route path="/academic" element={<AcademicListPage />} />
           <Route path="/academic/new" element={<AcademicFormPage />} />
           <Route path="/academic/:id" element={<AcademicDetailPage />} />
