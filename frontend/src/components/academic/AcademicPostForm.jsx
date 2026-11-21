@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { topics, programs } from '../../academicOptions';
 import './AcademicPostForm.css';
 
+// Jharshini - a suggestion, it would be cleaner to send back only the six form fields
+// instead of the entire post from API
 function AcademicPostForm({ initialPost, onSave, cancelTo }) {
   const [values, setValues] = useState(
     initialPost || { title: '', topic: '', program: '', courseCode: '', body: '', tips: '' },
@@ -22,6 +24,7 @@ function AcademicPostForm({ initialPost, onSave, cancelTo }) {
       setBusy(false);
     }
   }
+  // Jharshini - I like that you used fieldset disabled={busy} to prevent double submits
   return (
     <form className="academic-post-form" onSubmit={submit}>
       <p>
