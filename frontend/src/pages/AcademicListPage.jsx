@@ -6,6 +6,10 @@ import AcademicFilters from '../components/academic/AcademicFilters';
 import AcademicPostCard from '../components/academic/AcademicPostCard';
 import './AcademicListPage.css';
 
+// Jharshini - keeping the filters and page number in the URL with useSearchParams is
+// a good move. Allows the search to be shared/bookmarked/refreshed without losing it
+// I also like that your page haneles loading, error, and other states separately 
+// and role="alert" for screen readers
 function AcademicListPage() {
   const { user } = useAuth();
   const [searchParams, setSearchParams] = useSearchParams();
@@ -19,7 +23,6 @@ function AcademicListPage() {
     program: searchParams.get('program') || '',
     courseCode: searchParams.get('courseCode') || '',
   };
-
   useEffect(() => {
     const controller = new AbortController();
     setLoading(true);
@@ -52,6 +55,9 @@ function AcademicListPage() {
 
   const pageCount = result ? Math.max(1, Math.ceil(result.total / result.pageSize)) : 1;
 
+  // Jharshini - one suggestion, instead of replacing the list with "Loading posts" on filter/page change
+  // it would be better to have the old results stay visible but perhaps faded until loading is complete
+  // so the page doesn't flash during loading
   return (
     <div className="academic-list page-shell">
       <div className="academic-list__intro">
