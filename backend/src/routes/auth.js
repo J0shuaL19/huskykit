@@ -57,6 +57,8 @@ function createAuthRouter(users, passport) {
       user._id = result.insertedId;
       return logIn(req, res, next, user, 201);
     } catch (error) {
+      // Jharshini - I like that you used unique index and catching error code 1100 to
+      // check for taken usernames instead of querying the database
       if (error.code === 11000)
         return res.status(409).json({ error: 'That username is already taken.' });
       return next(error);
