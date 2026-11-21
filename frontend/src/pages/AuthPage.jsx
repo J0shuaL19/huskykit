@@ -8,6 +8,7 @@ function AuthPage({ mode }) {
   const { user, loading, authenticate } = useAuth();
   const [searchParams] = useSearchParams();
   const next = searchParams.get('next');
+  // Jharshini - this regex is a good safety check
   const destination = next && /^\/(academic|campus)(\/|\?|$)/.test(next) ? next : '/academic';
   const [error, setError] = useState('');
   const [busy, setBusy] = useState(false);
@@ -35,6 +36,10 @@ function AuthPage({ mode }) {
       </p>
     );
   if (user) return <Navigate to={destination} replace />;
+  // Jharshini - autoComplete is a great addition
+  // one comeent on the password requirements though: currently it says 
+  // at most 72 UTF-8 bytes, which might not be understood by non-developers
+  // would be better to say at most 72 characters instead
   return (
     <div className="auth-page page-shell">
       <form className="auth-page__form" onSubmit={submit}>
