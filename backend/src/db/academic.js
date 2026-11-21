@@ -5,6 +5,8 @@ function validateAcademicPost(body = {}) {
   if (!body || typeof body !== 'object' || Array.isArray(body))
     return { error: 'A post object is required.' };
   const fields = {};
+  // Jharshini - I like that you looped over every field with its min & max lengths 
+  // instead of using if else for each
   for (const [field, min, max] of [
     ['title', 5, 120],
     ['topic', 1, 40],
@@ -25,6 +27,7 @@ function validateAcademicPost(body = {}) {
   return { fields };
 }
 
+// Jharshini - I l ike that you are hiding internal fields like seedKey
 function publicAcademicPost(post) {
   const { _id, seedKey: _seedKey, ...fields } = post;
   return { id: _id.toString(), ...fields };
